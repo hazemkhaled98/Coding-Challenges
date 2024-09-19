@@ -33,6 +33,8 @@ public class Application {
 
                 case "-w" -> System.out.println(fileManager.getWordsCount());
 
+                case "-m" -> System.out.println(fileManager.getCharactersCount());
+
                 default -> System.out.println("Unknown command: " + command);
             }
 

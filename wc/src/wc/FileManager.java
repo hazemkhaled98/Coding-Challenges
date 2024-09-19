@@ -10,16 +10,13 @@ import java.util.List;
 class FileManager {
 
     private Path path;
-    private FileChannel fileChannel;
-
 
     FileManager(String fileUri) throws IOException {
         path = Paths.get(fileUri);
-        fileChannel = FileChannel.open(path);
     }
 
     long getFileSize() throws IOException {
-        return fileChannel.size();
+        return Files.size(path);
     }
 
     long getLinesCount() throws IOException {
@@ -38,7 +35,11 @@ class FileManager {
         return wordsCount;
     }
 
-    void closeFile() throws IOException {
-        fileChannel.close();
+
+    long getCharactersCount() throws IOException {
+        return Files.lines(path)
+                .mapToLong(String::length)
+                .sum();
     }
+
 }
