@@ -1,7 +1,6 @@
 package wc;
 
 import java.io.IOException;
-import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -40,6 +39,10 @@ class FileManager {
         return Files.lines(path)
                 .mapToLong(String::length)
                 .sum();
+    }
+
+    String getFileName() {
+        return path.getFileName().toString();
     }
 
 }

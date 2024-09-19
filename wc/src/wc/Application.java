@@ -12,15 +12,22 @@ public class Application {
         Logger logger = Logger.getLogger("wc logger");
         logger.info("==== WC Tool ====");
 
-        FileChannel fileChannel = null;
 
         // TODO read from args instead of scanner
         Scanner scanner = new Scanner(System.in);
 
         String[] tokens = scanner.nextLine().split("\\s+");
 
-        final String command = tokens[1];
-        final String path = tokens[2];
+        String command = null;
+        String path = null;
+
+        if(tokens.length == 3){
+            command = tokens[1];
+            path = tokens[2];
+        } else {
+            command = "all";
+            path = tokens[1];
+        }
 
 
         try {
@@ -34,6 +41,9 @@ public class Application {
                 case "-w" -> System.out.println(fileManager.getWordsCount());
 
                 case "-m" -> System.out.println(fileManager.getCharactersCount());
+
+                case "all" -> System.out.printf("%d %d %d %s", fileManager.getFileSize(),
+                        fileManager.getLinesCount(), fileManager.getWordsCount(), fileManager.getFileName());
 
                 default -> System.out.println("Unknown command: " + command);
             }
