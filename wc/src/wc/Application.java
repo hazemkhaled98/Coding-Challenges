@@ -22,24 +22,23 @@ public class Application {
         final String command = tokens[1];
         final String path = tokens[2];
 
-        try {
-            fileChannel = FileManager.openFile(path);
-        } catch (IOException e) {
-            logger.severe("Error opening file: " + path);
-            System.exit(1);
-        }
 
-        switch(command){
-            case "-c" -> {
-                try {
-                    System.out.println(fileChannel.size());
-                } catch (IOException e) {
-                    logger.severe("File closed unexpectedly. Path:  " + path);
-                    System.exit(1);
-                }
+        try {
+            FileManager fileManager = new FileManager(path);
+
+            switch(command){
+                case "-c" -> System.out.println(fileManager.getFileSize());
+
+                case "-l" -> System.out.println(fileManager.getLinesCount());
+
+                case "-w" -> System.out.println(fileManager.getWordsCount());
+
+                default -> System.out.println("Unknown command: " + command);
             }
 
-            default -> System.out.println("Unknown command: " + command);
+        } catch (IOException e) {
+            logger.severe("Error operating on file: " + path);
+            System.exit(1);
         }
 
     }

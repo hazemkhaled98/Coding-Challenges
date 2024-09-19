@@ -2,24 +2,43 @@ package wc;
 
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 class FileManager {
 
-    private static FileChannel fileChannel;
+    private Path path;
+    private FileChannel fileChannel;
 
-    static FileChannel openFile(String path) throws IOException {
 
-        Path filePath = Paths.get(path);
-
-        fileChannel = FileChannel.open(filePath);
-
-        return fileChannel;
+    FileManager(String fileUri) throws IOException {
+        path = Paths.get(fileUri);
+        fileChannel = FileChannel.open(path);
     }
 
-    static void closeFile() throws IOException {
+    long getFileSize() throws IOException {
+        return fileChannel.size();
+    }
+
+    long getLinesCount() throws IOException {
+        return Files.readAllLines(path).size();
+    }
+
+    long getWordsCount() throws IOException {
+        List<String> lines = Files.readAllLines(path);
+        long wordsCount = 0;
+        for (String line : lines) {
+            line = line.trim();
+            if(!line.isEmpty()) {
+                wordsCount += line.split("\\s+").length;
+            }
+        }
+        return wordsCount;
+    }
+
+    void closeFile() throws IOException {
         fileChannel.close();
     }
-
 }
