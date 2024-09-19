@@ -5,10 +5,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Stream;
 
 class FileManager {
 
-    private Path path;
+    private final Path path;
 
     FileManager(String fileUri) throws IOException {
         path = Paths.get(fileUri);
@@ -36,9 +37,10 @@ class FileManager {
 
 
     long getCharactersCount() throws IOException {
-        return Files.lines(path)
-                .mapToLong(String::length)
-                .sum();
+         try(Stream<String> lines = Files.lines(path)){
+             return lines.mapToLong(String::length)
+                     .sum();
+        }
     }
 
     String getFileName() {
