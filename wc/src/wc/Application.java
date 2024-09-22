@@ -6,7 +6,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             CommandLineArgs parsedArgs = parseArgs(args);
-            Commander.execute(parsedArgs.command, parsedArgs.source);
+            CommandInvoker.execute(parsedArgs.command, parsedArgs.source);
         } catch (IllegalArgumentException e) {
             System.err.println("Error: " + e.getMessage());
             printUsage();

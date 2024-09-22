@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-class Commander {
+class CommandInvoker {
     private static final Logger logger = Logger.getLogger("wc logger");
 
-    private Commander() {}
+    private CommandInvoker() {}
 
     static void execute(Command command, String source) {
         try {
