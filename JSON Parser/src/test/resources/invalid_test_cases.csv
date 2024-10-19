@@ -1,0 +1,5 @@
+scenario,filePath,message
+Empty File,src/test/resources/tests/step1/invalid.json,Empty Json file
+Invalid Key,src/test/resources/tests/step2/invalid.json,Unrecognized Keyword: key
+Invalid Value,src/test/resources/tests/step3/invalid.json,Unrecognized Keyword: False
+Invalid String in Array,src/test/resources/tests/step4/invalid.json,Unrecognized character: '

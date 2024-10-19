@@ -1,0 +1,7 @@
+scenario,path,expectedTokens
+Empty JSON,src/test/resources/tests/step1/valid.json,2
+JSON with one key and value,src/test/resources/tests/step2/valid.json,5
+JSON with more than one key and value,src/test/resources/tests/step2/valid2.json,9
+JSON with with boolean and null values,src/test/resources/tests/step3/valid.json,21
+JSON with empty object and array values,src/test/resources/tests/step4/valid.json,19
+JSON with object and array values,src/test/resources/tests/step4/valid2.json,23
