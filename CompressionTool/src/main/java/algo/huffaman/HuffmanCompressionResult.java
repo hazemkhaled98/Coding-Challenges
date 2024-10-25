@@ -9,14 +9,10 @@ record HuffmanCompressionResult(String encodedText, Map<String, String> huffmanC
     public String toString() {
         StringBuilder result = new StringBuilder();
 
-        result.append("### Huffman Codes ###\n");
-        result.append("-----------------------\n");
         for (Map.Entry<String, String> entry : huffmanCodes.entrySet()) {
-            result.append(String.format("%-10s : %s%n", entry.getKey(), entry.getValue()));
+            result.append(String.format("%s:%s%n", entry.getKey(), entry.getValue()));
         }
-        result.append("-----------------------\n");
 
-        result.append("\n### Encoded Text ###\n");
         result.append(encodedText).append("\n");
 
         return result.toString();
@@ -27,25 +23,20 @@ record HuffmanCompressionResult(String encodedText, Map<String, String> huffmanC
         Map<String, String> huffmanCodes = new HashMap<>();
         String encodedText = null;
 
-
-        input = input.replace("### Huffman Codes ###", "")
-                .replace("### Encoded Text ###", "")
-                .replace("-----------------------", "");
-
-        String[] lines = input.split("\\n+");
+        String[] lines = input.split("\n");
 
 
         for (String line : lines) {
-            // Check if the line represents encoded text (starts with a '0' or '1')
-            if (line.matches("^[01]+$")) {
-                encodedText = line;
-            }
+            line = line.trim();
 
-            else if (line.contains(":")) {
+            if (line.contains(":")) {
                 String[] parts = line.split(":");
                 if (parts.length == 2) {
-                    huffmanCodes.put(parts[0].trim(), parts[1].trim());
+                    huffmanCodes.put(parts[0], parts[1]);
                 }
+            }
+            else {
+                encodedText = line;
             }
         }
 

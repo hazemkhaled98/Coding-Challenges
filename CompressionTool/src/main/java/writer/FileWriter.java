@@ -17,6 +17,6 @@ public class FileWriter implements Writer{
     @Override
     public Path writeOutput(String text) throws IOException {
         Path path = Path.of(fileName);
-        return Files.writeString(path, text, Charset.defaultCharset(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+        return Files.writeString(path, text, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 }
