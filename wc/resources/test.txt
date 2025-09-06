@@ -2702,7 +2702,7 @@ the finger on the trigger.]
 
 16. Amid the turmoil and tumult of battle, there may be seeming
 disorder and yet no real disorder at all; amid confusion and chaos,
-your array may be without head or tail, yet it will be proof against
+your respArray may be without head or tail, yet it will be proof against
 defeat.
 
 [Mei Yao-ch’en says: "The subdivisions of the army having been
@@ -3203,7 +3203,7 @@ and harmonise the different elements thereof before pitching his camp.
 the higher and lower ranks before venturing into the field;" and he
 quotes a saying of Wu Tzŭ (chap. 1 ad init.): "Without harmony in the
 State, no military expedition can be undertaken; without harmony in the
-army, no battle array can be formed." In an historical romance Sun Tzŭ
+army, no battle respArray can be formed." In an historical romance Sun Tzŭ
 is represented as saying to Wu Yuan: "As a general rule, those who are
 waging war should get rid of all the domestic troubles before
 proceeding to attack the external foe."]
@@ -3529,7 +3529,7 @@ a commander-in-chief may be robbed of his presence of mind.
 asset. It is the quality which enables him to discipline disorder and
 to inspire courage into the panic-stricken." The great general Li Ching
 (A.D. 571-649) has a saying: "Attacking does not merely consist in
-assaulting walled cities or striking at an army in battle array; it
+assaulting walled cities or striking at an army in battle respArray; it
 must include the art of assailing the enemy’s mental equilibrium."]
 
 
@@ -3557,7 +3557,7 @@ the enemy is famished:—this is the art of husbanding one’s strength.
 
 32. To refrain from intercepting an enemy whose banners are in perfect
 order, to refrain from attacking an army drawn up in calm and confident
-array:—this is the art of studying circumstances.
+respArray:—this is the art of studying circumstances.
 
 33. It is a military axiom not to advance uphill against the enemy, nor
 to oppose him when he comes downhill.
@@ -5127,7 +5127,7 @@ they would remain where they were."]
 
 
 18. If asked how to cope with a great host of the enemy in orderly
-array and on the point of marching to the attack, I should say: "Begin
+respArray and on the point of marching to the attack, I should say: "Begin
 by seizing something which your opponent holds dear; then he will be
 amenable to your will."
 
@@ -6266,7 +6266,7 @@ says: "Rewards for good service should not be deferred a single day."
 And Tu Mu: "If you do not take opportunity to advance and reward the
 deserving, your subordinates will not carry out your commands, and
 disaster will ensue." For several reasons, however, and in spite of the
-formidable array of scholars on the other side, I prefer the
+formidable respArray of scholars on the other side, I prefer the
 interpretation suggested by Mei Yao-ch’en alone, whose words I will
 quote: "Those who want to make sure of succeeding in their battles and
 assaults must seize the favourable moments when they come and not shrink
@@ -7093,7 +7093,7 @@ Project Gutenberg™ depends upon and cannot survive without widespread
 public support and donations to carry out its mission of
 increasing the number of public domain and licensed works that can be
 freely distributed in machine-readable form accessible by the widest
-array of equipment including outdated equipment. Many small donations
+respArray of equipment including outdated equipment. Many small donations
 ($1 to $5,000) are particularly important to maintaining tax exempt
 status with the IRS.
 
